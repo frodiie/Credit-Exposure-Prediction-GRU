@@ -12,7 +12,8 @@ import random
 from scipy import interpolate
 
 
-def move_in_parallel(yield_curve: np.ndarray, offset: float, normal_dist: bool=True):
+def move_in_parallel(yield_curve: np.ndarray, offset: float, 
+                     normal_dist: bool=True):
     """
     Moves yield curve 'offset' in parallel.
     """
@@ -29,17 +30,20 @@ def move_in_parallel(yield_curve: np.ndarray, offset: float, normal_dist: bool=T
     return y0
 
 
-def multiply_curves(yield_curve1: np.ndarray, yield_curve2: np.ndarray, ttm1: np.ndarray, 
-                         ttm2: np.ndarray):
+def multiply_curves(yield_curve1: np.ndarray, yield_curve2: np.ndarray, 
+                    ttm1: np.ndarray, ttm2: np.ndarray):
     """
     Multiplies and takes the square root of two curves (element wise).
     """
-    f = interpolate.interp1d(ttm2, yield_curve2, fill_value='extrapolate')
+    f = interpolate.interp1d(ttm2, 
+                             yield_curve2, 
+                             fill_value='extrapolate')
     yield_curve2 = f(ttm1)
     return np.sqrt(np.multiply(yield_curve1, yield_curve2))
 
 
-def tilt_curve(yield_curve: np.ndarray, tilt: float, offset: float, normal_dist: bool=True):
+def tilt_curve(yield_curve: np.ndarray, tilt: float, offset: float, 
+               normal_dist: bool=True):
     """
     Tilts yield curve.
     """
