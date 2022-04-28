@@ -1,11 +1,13 @@
 """
 @Authors: Viktor Sambergs & Isabelle Frodé
-@Date: Feb 2021
+@Date: Feb 2022
 """
+
 
 import numpy as np
 import pandas as pd
 import random
+
 
 from scipy import interpolate
 
@@ -39,7 +41,7 @@ def multiply_curves(yield_curve1: np.ndarray, yield_curve2: np.ndarray, ttm1: np
 
 def tilt_curve(yield_curve: np.ndarray, tilt: float, offset: float, normal_dist: bool=True):
     """
-    Tilts yiled curve.
+    Tilts yield curve.
     """
     if normal_dist:
         tilt = np.random.normal(0, np.abs(tilt), 1)[0]
