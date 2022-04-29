@@ -5,7 +5,7 @@ The repo intends to release code for our Master Thesis: *link*. The code can be 
 - Train a GRU neural network to reproduce EPE from yield data
 
 ## Setup
-Clone the project and collect yield data to run the code. An example is provided in the DEMO-notebook.
+Clone the project and collect yield data to run the code.
 
 ## Dependencies
 - [Keras >= 2.7.0](https://keras.io)
