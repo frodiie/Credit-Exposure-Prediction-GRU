@@ -1,5 +1,5 @@
 # Credit Exposures using a GRU Neural Network
-The repo intends to release code for our Master Thesis: *link*. The code can be used to
+The repo intends to release code for our Master Thesis **Neural Networks for Credit Risk and xVA in a Front Office Pricing Environment**. The code can be used to
 - Produce augmented yield data from existing yield data
 - Generate expected positive exposure (EPE) from yield data
 - Train a GRU neural network to reproduce EPE from yield data
